@@ -1,4 +1,4 @@
-let str = "bob";
+let str = "my name my";
 
 // console.log({ newstr });
 let remodub = (n) => {
@@ -11,8 +11,10 @@ let remodub = (n) => {
         newstr.splice(j, 1);
       }
     }
-    console.log(newstr);
+
+    // console.log(newstr);
   }
+  return newstr.join("");
 };
 
 console.log(remodub(str));
