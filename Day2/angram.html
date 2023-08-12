@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let str1 = "listen";
+  let str2 = "silent";
+
+  let newstr1 = str1.split("");
+  let newstr2 = str2.split("");
+  // console.log({ newstr1, newstr2 });
+
+  let CheckAnagram = (a, b) => {
+    let store = [];
+    for (let i = 0; i < a.length; i++) {
+      for (let j = 0; j < b.length; j++) {
+        if (a[i] == b[j]) {
+          store.push(b.splice(j, 1)[0]);
+          console.log("store", store);
+          console.log("a", a);
+        }
+      }
+    }
+  };
+  CheckAnagram(newstr1, newstr2);
+</script>
