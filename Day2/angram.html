@@ -17,14 +17,24 @@
 
   let CheckAnagram = (a, b) => {
     let store = [];
+    let newstore;
     for (let i = 0; i < a.length; i++) {
       for (let j = 0; j < b.length; j++) {
         if (a[i] == b[j]) {
-          store.push(b.splice(j, 1)[0]);
-          console.log("store", store);
-          console.log("a", a);
+          store.push(b.splice(j, 1));
+
+          newstore = store.flat(); // use for double array to convert into single
+
+          // console.log("store", store);
+          // console.log("a", a);
         }
       }
+    }
+
+    if (a.length == newstore.length && b.length == 0) {
+      console.log("its amgranm");
+    } else {
+      console.log("its not anagram");
     }
   };
   CheckAnagram(newstr1, newstr2);
