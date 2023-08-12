@@ -28,8 +28,8 @@
 
 // ++++++++++++++++++++++++++++=Prob03+++++++++++++++++++++++++++++
 
-let str1 = "listen";
-let str2 = "silent";
+let str1 = "carrace";
+let str2 = "racecar";
 
 let newstr1 = str1.split("");
 let newstr2 = str2.split("");
@@ -45,6 +45,7 @@ let CheckAnagram = (a, b) => {
 
         newstore = store.flat(); // use for double array to convert into single
 
+        console.log("newstore", newstore);
         // console.log("store", store);
         // console.log("a", a);
       }
